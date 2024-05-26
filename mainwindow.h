@@ -130,8 +130,6 @@ private:
     QLabel *hintLabel;
     QLabel *skipLabel;
     QLabel *scoreLabel;
-    QLabel *gifLabel;
-    QMovie *gif;
 
     QTextEdit *feedbackTextEdit;
 
