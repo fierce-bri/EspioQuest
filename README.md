@@ -18,7 +18,6 @@ For Linux, uncomment these lines in the espoQuest.pro file:
 
 #INCLUDEPATH += /usr/include/SFML
 
-# Link against SFML libraries
 #LIBS += -L/usr/lib/x86_64-linux-gnu \
        # -lsfml-graphics \
        # -lsfml-window \
@@ -26,4 +25,4 @@ For Linux, uncomment these lines in the espoQuest.pro file:
        # -lsfml-audio \
        # -lsfml-network
        
-Ensure you have SFML installed in your PC, and refer to 'Screenshots and instructions.pdf' file to open the file correctly in your QT Creator IDE
+Ensure you have SFML installed in your PC, and refer to 'Screenshots and instructions.pdf' file to open the file correctly in your QT Creator IDE. Don't forget to change the paths in any line of code that loads pictures or sounds after downloading pictures and sounds from the 'pictures.zip' file
