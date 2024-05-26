@@ -32,15 +32,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 # Add SFML include directory to the include path
-INCLUDEPATH += /usr/include/SFML
+#INCLUDEPATH += /usr/include/SFML
 
 # Link against SFML libraries
-LIBS += -L/usr/lib/x86_64-linux-gnu \
-        -lsfml-graphics \
-        -lsfml-window \
-        -lsfml-system \
-        -lsfml-audio \
-        -lsfml-network
+#LIBS += -L/usr/lib/x86_64-linux-gnu \
+       # -lsfml-graphics \
+       # -lsfml-window \
+        #-lsfml-system \
+       # -lsfml-audio \
+       # -lsfml-network
 
 #CONFIG(debug,debug|release): LIBS +=    -lsfml-graphics-d \
                                      #   -lsfml-window-d \
