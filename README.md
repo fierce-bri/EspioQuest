@@ -1,4 +1,4 @@
-# EspioQuest
+# The Emerald Cipher (2D Quiz Game)
 An adventure game set in the Scottish Highlands, where players must solve riddles and trivia questions to progress through the game.
 
 For Windows, uncomment these lines on the espoQuest.pro file:
