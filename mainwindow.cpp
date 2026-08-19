@@ -47,9 +47,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-
-    //Stop the background music when the window is destroyed
-    backgroundMusic.stop();
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::fadeInWidget() {
@@ -1275,38 +1272,12 @@ void MainWindow::on_hintBtn_clicked(){
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::playBackgroundMusic()
 {
-    // Load the background music from the resource file
-    if (!backgroundMusic.openFromFile("/home/aphiwe/Downloads/Quiz_game_project/espoQuest/pictures/background_music.wav")) {
-        qDebug() << "Error loading music";
-        return; // Exit the method if loading fails
-    }
-
-    // Set the volume
-    backgroundMusic.setVolume(20); // Adjust volume as needed
-
-    // Set whether the music should loop
-    backgroundMusic.setLoop(true); // Loop indefinitely
-
-    // Play the background music
-    backgroundMusic.play();
+    // Audio removed from the portfolio version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
-void MainWindow::playClickSound(){
-
-    // Load the click sound from the resource file
-    if (!clickBuffer.loadFromFile("/home/aphiwe/Downloads/Quiz_game_project/espoQuest/pictures/click_sound.wav")) {
-        qDebug() << "Error loading click sound";
-        return; // Exit the method if loading fails
-    }
-
-    // Create a sound object and set its buffer to the loaded click sound
-    clickSound.setBuffer(clickBuffer);
-
-    // Set the volume
-    clickSound.setVolume(60); // Adjust volume as needed
-
-    // Play the click sound
-    clickSound.play();
+void MainWindow::playClickSound()
+{
+    // Audio removed from the portfolio version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::updateProgress(){
@@ -1316,27 +1287,9 @@ void MainWindow::updateProgress(){
     progress->setValue(newValue);
 }
 //--------------------------------------------------------------------------------------------------------------------------
-void MainWindow::playAnswerSound(){
-
-    if (isCorrectAnswer()){
-        if (!answerSoundBuffer.loadFromFile("/home/aphiwe/Downloads/Quiz_game_project/espoQuest/pictures/correct_answer.wav")) {
-            qDebug() << "Error loading click sound";
-            return; // Exit the method if loading fails
-        }
-    }else {
-        if (!answerSoundBuffer.loadFromFile("/home/aphiwe/Downloads/Quiz_game_project/espoQuest/pictures/wrong_answer.wav")) {
-            qDebug() << "Error loading click sound";
-            return; // Exit the method if loading fails
-        }
-    }
-    // Create a sound object and set its buffer to the loaded click sound
-    answerSound.setBuffer(answerSoundBuffer);
-
-    // Set the volume
-    answerSound.setVolume(60); // Adjust volume as needed
-
-    // Play the click sound
-    answerSound.play();
+void MainWindow::playAnswerSound()
+{
+    // Audio removed from the portfolio version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::on_musicButton_clicked()
@@ -1356,39 +1309,22 @@ void MainWindow::on_musicButton_clicked()
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::on_soundButton_clicked()
 {
-    // Toggle the state of button sounds
-    buttonSoundsEnabled = !buttonSoundsEnabled;
-
-    // Update the icon and tooltip of the soundButton
-    QIcon icon;
-    QString toolTip;
-    if (buttonSoundsEnabled) {
-        icon = QIcon::fromTheme("audio-volume-high");
-        toolTip = tr("Sound On");
-    } else {
-        icon = QIcon::fromTheme("audio-volume-muted");
-        toolTip = tr("Sound Off");
-    }
-    ui->soundButton->setIcon(icon);
-    ui->soundButton->setToolTip(toolTip);
+    // Audio controls are disabled.
 }
 //--------------------------------------------------------------------------------------------------------------------------
-void MainWindow::stopClickSound() {
-    // Stop the click sound if it is currently playing
-    clickSound.stop();
+void MainWindow::stopClickSound()
+{
+    // Audio removed from the portfolio version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
-void MainWindow::stopAnswerSound(){
-    answerSound.stop();
+void MainWindow::stopAnswerSound()
+{
+    // Audio removed from the portfolio version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::toggleButtonSounds(QPushButton *button)
 {
-    if (buttonSoundsEnabled) {
-        button->connect(button, &QPushButton::clicked, this, &MainWindow::playClickSound);
-    }else{
-        button->connect(button, &QPushButton::clicked, this, &MainWindow::stopClickSound);
-    }
+    Q_UNUSED(button);
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::setDefaultColor(){
