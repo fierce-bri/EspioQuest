@@ -19,7 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     //set font color for BEGIN QUIZ
     ui->promptLabel->setStyleSheet("color: red; background-color: transparent;");
     ui->quitBtn->setToolTip("Quit Game");
-    ui->musicButton->setIcon(QIcon(":/sounds/musical-note-symbol.ico"));
+    
+    ui->musicButton->hide();
+    ui->soundButton->hide();
 
     //Set backround in the main page
     ui->tabWidget->widget(0)->setStyleSheet("background-image: url(:/pictures/pictures/menuImage.png);");
@@ -39,9 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Set the combined pixmap as the pixmap for the instructionImage label
     ui->instructionImage->setPixmap(originalPixmap);
 
-    playBackgroundMusic();
-    isMusicPlaying = true;
-    buttonSoundsEnabled = true;
+    buttonSoundsEnabled = false;
 }
 //--------------------------------------------------------------------------------------------------------------------------
 MainWindow::~MainWindow()
