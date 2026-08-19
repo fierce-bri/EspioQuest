@@ -8,7 +8,6 @@
 #include <feedback.h>
 
 #include <QTabWidget>
-#include <SFML/Graphics.hpp>
 #include <QPushButton>
 #include <QScrollArea>
 #include <QLabel>
@@ -21,7 +20,6 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QStyle>
-#include <SFML/Audio.hpp>
 #include <QAbstractAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QPropertyAnimation>
@@ -156,14 +154,7 @@ private:
 
     int progressBarDiameter;
 
-    sf::RenderWindow m_sfmlWindow;// Declare sf::RenderWindow member variable
-    sf::Music backgroundMusic;
-    sf::Sound clickSound;
-    sf::SoundBuffer clickBuffer;
-    sf::Sound answerSound;
-    sf::SoundBuffer answerSoundBuffer;
-    bool isMusicPlaying = false; // Track the state of background music
-    bool buttonSoundsEnabled = true;
+    bool buttonSoundsEnabled = false;
 
     QPushButton* answerButton1;
     QPushButton* answerButton2;
