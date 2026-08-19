@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/pictures">
+        <file alias="pictures/menuImage.png">pictures/menuImage.png</file>
+        <file alias="pictures/instructionImage.png">pictures/instructionImage.png</file>
+        <file alias="pictures/image.png">pictures/image.png</file>
+        <file alias="pictures/quiz.png">pictures/quiz.png</file>
+        <file alias="pictures/feedbackBackground.png">pictures/feedbackBackground.png</file>
+        <file alias="pictures/light_bulb.jpg">pictures/light_bulb.jpg</file>
+        <file alias="pictures/lock.jpg">pictures/lock.jpg</file>
+    </qresource>
+</RCC>
