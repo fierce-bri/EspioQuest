@@ -151,10 +151,6 @@
         <property name="text">
          <string/>
         </property>
-        <property name="icon">
-         <iconset resource="pictures/Sounds.qrc">
-          <normaloff>:/sounds/musical-note-symbol.ico</normaloff>:/sounds/musical-note-symbol.ico</iconset>
-        </property>
         <property name="iconSize">
          <size>
           <width>50</width>
@@ -196,12 +192,15 @@
           <height>171</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: white; background: transparent; font-size: 42px; font-weight: bold;</string>
+        </property>
         <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="Resources.qrc">:/pictures/pictures/name.png</pixmap>
-        </property>
+         <string>ESPIOQUEST</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+      </property>
        </widget>
        <widget class="QPushButton" name="quitBtn">
         <property name="geometry">
@@ -212,19 +211,12 @@
           <height>56</height>
          </rect>
         </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset resource="pictures/Sounds.qrc">
-          <normaloff>:/sounds/power-button.ico</normaloff>:/sounds/power-button.ico</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>40</width>
-          <height>50</height>
-         </size>
-        </property>
+       <property name="styleSheet">
+        <string notr="true">background: #8b1a1a; color: white; font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_2">
@@ -309,9 +301,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="Resources.qrc"/>
-  <include location="pictures/Sounds.qrc"/>
- </resources>
+<resources>
+ <include location="Resources.qrc"/>
+</resources>
  <connections/>
 </ui>
