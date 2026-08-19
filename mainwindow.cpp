@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <algorithm>
+#include <random>
+
 //--------------------------------------------------------------------------------------------------------------------------
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -203,7 +206,13 @@ void MainWindow::eliminateChoices() {
         }
 
         // Randomly select two incorrect answer choices to eliminate
-        std::random_shuffle(incorrectIndices.begin(), incorrectIndices.end());
+        static std::mt19937 randomEngine{std::random_device{}()};
+        std::shuffle(
+            incorrectIndices.begin(),
+            incorrectIndices.end(),
+            randomEngine
+        );
+        
         int choice1 = incorrectIndices.at(0);
         int choice2 = incorrectIndices.at(1);
 
