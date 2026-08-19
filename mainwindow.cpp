@@ -1294,17 +1294,7 @@ void MainWindow::playAnswerSound()
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::on_musicButton_clicked()
 {
-    if (isMusicPlaying) {
-        backgroundMusic.stop();
-        ui->musicButton->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-        ui->musicButton->setToolTip(tr("Play Music"));
-        isMusicPlaying = false;
-    } else {
-        backgroundMusic.play();
-        ui->musicButton->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
-        ui->musicButton->setToolTip(tr("Stop Music"));
-        isMusicPlaying = true;
-    }
+    // Audio controls are disabled in this version.
 }
 //--------------------------------------------------------------------------------------------------------------------------
 void MainWindow::on_soundButton_clicked()
