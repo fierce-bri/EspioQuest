@@ -1,0 +1,57 @@
+# Qt Creator and qmake
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.autosave
+
+# Generated Qt files
+moc_*
+ui_*.h
+qrc_*.cpp
+object_script.*
+*_plugin_import.cpp
+
+# Build output
+build/
+build-*/
+debug/
+release/
+out/
+bin/
+
+# C++ compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+*.exe
+*.app/
+
+# Generated build files
+Makefile
+Makefile.*
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+
+# IDE settings
+.vscode/
+.idea/
+*.suo
+*.user
+*.user.*
+*.userosscache
+*.sln.docstates
+
+# macOS and Windows
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+*.swp
