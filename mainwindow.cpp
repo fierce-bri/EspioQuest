@@ -456,8 +456,6 @@ void MainWindow::showQuizWindow(){
     // Create the skipButton and set its properties
     skipButton = new QPushButton("Skip", this);
     skipButton->setStyleSheet("color: orange; background-color: white;");
-    skipButton->setIcon(QIcon(":/pictures/pictures/skip.png"));
-    skipButton->setIconSize(QSize(50, 60));
     skipButton->setGeometry(10, yCoord, 100, btnH); // Set coordinates for bottom-left corner
     skipButton->setVisible(true); // Set skip button visible
     toggleButtonSounds(skipButton);
